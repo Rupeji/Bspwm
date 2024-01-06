@@ -34,7 +34,9 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
-feh --bg-fill ~/.config/wallpaper/old.jpg
+feh --bg-fill ~/.config/wallpaper/wallpaper.jpg
+xrandr --output Virtual1 --mode 1920x1080 --rate 59.96 &
+vmware-user-suid-wrapper &
 
 #bspwm colores
 #bspc config normal_border_color         "#51576d"
