@@ -49,6 +49,8 @@ function copia() {
     sudo cp -rv $1/dotfiles/powerlevel10k/root/.p10k.zsh "/root/"
 
     #Clonando lo necesario para Rofi
+    cd
+    git clone https://github.com/Rupeji/Bspwm2.git
     
     # plugin sudo
     cd /usr/share
@@ -73,8 +75,7 @@ function copia() {
     service=$(sudo loginctl show-session $XDG_SESSION_ID | awk -F= '/Service/ {print $2}')
     sudo systemctl disable $service
     sudo systemctl enable sddm
-    sudo cp -rv "$1/dotfiles/sddm/wallpaper.jpg" "/usr/share/sddm/themes/Sugar-Candy/Backgrounds/"
-    sudo cp -rv "$1/dotfiles/sddm/theme.conf" "/usr/share/sddm/themes/Sugar-Candy/"
+    sudo cp -rv "$1/dotfiles/sddm/themes/*" "/usr/share/sddm/themes/"
     sudo cp -rv "$1/dotfiles/sddm/sddm.conf" "/etc/"
 }
 
