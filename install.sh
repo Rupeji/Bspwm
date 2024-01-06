@@ -103,10 +103,12 @@ function requerimientos() {
 
 function paquetes() {
     # Alacritty bspwm sxhkd feh polybar picom flameshot rofi sddm zsh lsd bat zsh-syntax-highlighting zsh-autosuggestions
-    sudo pacman -S --noconfirm alacritty bspwm sxhkd feh polybar picom flameshot rofi sddm zsh lsd bat zsh-syntax-highlighting zsh-autosuggestions
-
+    sudo pacman -S --noconfirm bspwm sxhkd feh polybar picom flameshot rofi sddm zsh lsd bat zsh-syntax-highlighting zsh-autosuggestions
+    sudo pacman -S --noconfirm kitty firefox mousepad lxappearance thunar mpd libmpdclient
+    #sudo pacman -S --noconfirm open-vm-tools
+    
     # tema para sddm
-    yay -S --noconfirm sddm-theme-sugar-candy-git
+    #yay -S --noconfirm sddm-theme-sugar-candy-git
 }
 
 # INSTALACION DE BETTERLOCKSCREEN
