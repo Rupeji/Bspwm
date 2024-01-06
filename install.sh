@@ -7,9 +7,9 @@
 # COPIA DE TODOS LOS ARCHIVOS DE CONFIGURACIÓN
 
 function copia() {
-    # Alacritty
-    mkdir "$HOME/.config/alacritty"
-    cp -rv "$1/dotfiles/alacritty/alacritty.yml" "$HOME/.config/alacritty/"
+    # Kitty    
+    mkdir "$HOME/.config/kitty"
+    cp -rv $1/dotfiles/kitty/* "$HOME/.config/kitty/"
 
     # bspwm & sxhkd
     mkdir "$HOME/.config/bspwm"
@@ -35,9 +35,6 @@ function copia() {
 
     # rofi
     mkdir "$HOME/.config/rofi"
-    cp -rv $1/dotfiles/rofi/* "$HOME/.config/rofi/"
-    chmod +x "$HOME/.config/rofi/powermenu/powermenu"
-    rofi-theme-selector
 
     # zsh
     sudo usermod --shell /usr/bin/zsh $USER
@@ -51,6 +48,8 @@ function copia() {
     cp -rv $1/dotfiles/powerlevel10k/user/.p10k.zsh "$HOME/"
     sudo cp -rv $1/dotfiles/powerlevel10k/root/.p10k.zsh "/root/"
 
+    #Clonando lo necesario para Rofi
+    
     # plugin sudo
     cd /usr/share
     sudo mkdir zsh-sudo
