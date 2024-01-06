@@ -35,6 +35,7 @@ function copia() {
 
     # rofi
     mkdir "$HOME/.config/rofi"
+    cp -rv $1/dotfiles/rofi/* "$HOME/.config/rofi/"
 
     # zsh
     sudo usermod --shell /usr/bin/zsh $USER
