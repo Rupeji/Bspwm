@@ -50,8 +50,8 @@ function copia() {
     sudo cp -rv $1/dotfiles/powerlevel10k/root/.p10k.zsh "/root/"
 
     #Clonando lo necesario para Rofi
-    cd
-    git clone https://github.com/Rupeji/Bspwm2.git
+    #cd
+    #git clone https://github.com/Rupeji/Bspwm2.git
     
     # plugin sudo
     cd /usr/share
@@ -84,7 +84,7 @@ function copia() {
 
 function requerimientos() {
     # Update
-    sudo pacman -Syu --noconfirm
+    #sudo pacman -Syu --noconfirm
 
     # yay
     git clone https://aur.archlinux.org/yay-git.git
